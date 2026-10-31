@@ -1,36 +1,62 @@
-# Scratch2Build – Week 3: Weekly Assignment
+# Scratch2Build - Assignment 3
+## Interactive Event Filter App
 
-## Assignment: Interactive Event Filter Application
+Welcome to Assignment 3 of the FCAI E-Club Scratch2Build Web Development Track!
 
-Build an interactive application that lets users explore and filter a list of events using **HTML, CSS, and Vanilla JavaScript**.
+This project focuses on building an interactive Event Filter Application using HTML, CSS, and Vanilla JavaScript.
 
-## What You Need to Build
-- Display a list of events.
-- Add a search field to find events by keyword.
-- Add a category filter.
-- Update the displayed results dynamically without reloading the page.
+The application allows users to create events, delete them, search through existing events, and filter them by category without refreshing the page.
 
-## Technical Requirements
-- Use Vanilla JavaScript.
-- Use DOM selection and manipulation to display the events.
-- Use event listeners to respond to user input.
-- Use array methods such as `filter()` and `forEach()` or `map()` where appropriate.
-- Make search and category filtering work together.
+## 🎯 Project Objectives
 
-## Getting Started
-1. Clone this repository.
-2. Open `index.html` in your browser.
-3. Complete the TODOs in `script.js`.
-4. Test the search and category filter.
+The main objective is to apply DOM Manipulation and Event-Driven Programming concepts in a practical application.
 
-## Submission
-- Create your own branch and push your work.
-- Open a Pull Request to submit your assignment.
-- Submit your Pull Request before **Wednesday at 11:59 PM**.
+## ✨ Features
 
-## Before Submitting
-- [ ] Search works by keyword.
-- [ ] Category filtering works.
-- [ ] Both filters work together.
-- [ ] Results update without a page reload.
-- [ ] No errors appear in the browser console.
+### 1. Interactive Form & Validation
+- Capture form submissions using `addEventListener('submit', ...)`.
+- Prevent page refresh using `e.preventDefault()`.
+- Validate that event titles contain at least 3 characters.
+- Ensure that a category is selected.
+- Display clear validation messages.
+- Reset the form after successful submission.
+
+### 2. Dynamic DOM Insertion & Deletion
+- Dynamically create new event cards.
+- Display event titles and category badges.
+- Delete event cards using Event Delegation.
+
+### 3. Search & Category Filters
+- Search events in real time using the `input` event.
+- Filter events by title keywords.
+- Filter events by category:
+  - All
+  - Tech
+  - Workshop
+  - Social
+- Allow search and category filters to work together.
+
+### 4. Live Counter & Empty State
+- Display the number of currently visible events.
+- Update the counter dynamically.
+- Display a "No events found" message when no events match the selected filters.
+
+## 🛠️ Technologies Used
+
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6+)
+- DOM Manipulation
+- Event Listeners
+- Event Delegation
+- Array Methods
+
+## 📂 Project Structure
+
+```text
+scratch2build-week3-event-filter/
+│
+├── index.html
+├── styles.css
+├── app.js
+└── README.md
