@@ -3,11 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch2Build Week 3 Assignment</title>
+  <title>Event Filter App</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<script src="script.js"></script>
+
+  <header>
+    <h1>Event Manager</h1>
+    <p>Create, search, and manage your events</p>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Add New Event</h2>
+      <form id="event-form">
+        <input type="text" id="event-title" placeholder="Enter event title">
+
+        <textarea id="event-description" placeholder="Enter event description" rows="3"></textarea>
+
+        <select id="event-category">
+          <option value="">Select Category</option>
+          <option value="tech">Tech</option>
+          <option value="workshop">Workshop</option>
+          <option value="social">Social</option>
+        </select>
+
+        <button type="submit">Add Event</button>
+        <p id="error-message"></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Find Events</h2>
+      <input type="text" id="search-input" placeholder="Search events...">
+
+      <select id="category-filter">
+        <option value="all">All Categories</option>
+        <option value="tech">Tech</option>
+        <option value="workshop">Workshop</option>
+        <option value="social">Social</option>
+      </select>
+    </section>
+
+    <section>
+      <h2>Events</h2>
+      <p id="event-count">Showing 0 Events</p>
+
+      <div id="events-container"></div>
+
+      <p id="empty-message">No events found</p>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
