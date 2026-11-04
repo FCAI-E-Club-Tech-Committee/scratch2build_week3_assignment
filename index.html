@@ -7,7 +7,43 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<script src="script.js"></script>
+  
+  <form id="event-form">
+    <label for="title-input">Event Title</label>
+    <input type="text" id="title-input" placeholder="Event Title">
+    <label for="category-input">Category</label>
+    <select id="category-input">
+      <option value="">Select Category</option>
+      <option value="tech">Tech</option>
+      <option value="workshop">Workshop</option>
+      <option value="social">Social</option>
+    </select>
+    <p id="form-error" hidden></p>
+    <button type="submit">Add Event</button>
+  </form>
+
+  
+  <section id="search-filter">
+    <label for="search-input">Search Events</label>
+    <input type="text" id="search-input" placeholder="Search events...">
+    <label for="category-select">Filter by Category</label>
+    <select id="category-select">
+      <option value="all">All Categories</option>
+      <option value="tech">Tech</option>
+      <option value="workshop">Workshop</option>
+      <option value="social">Social</option>
+    </select>
+    <p id="active-counter">0 events</p>
+  </section>
+
+  
+  <main>
+    <div id="events-container">
+
+    </div>
+    <p id="no-events-msg" hidden>No events found.</p>
+  </main>
+
+  <script src="app.js"></script>
 </body>
 </html>
