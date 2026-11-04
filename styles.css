@@ -39,7 +39,8 @@ input[type='text'] {
     width: 210px;
 }
 
-#add-btn {
+#add-btn,
+#search-btn {
     width: 100px;
 }
 
@@ -69,6 +70,12 @@ main {
     border-radius: 10px;
 }
 
+.delete-event {
+    align-self: flex-start;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
 .category {
     align-self: flex-end;
 }
@@ -95,4 +102,8 @@ main {
     border: 1px solid var(--social-main-color);
     border-radius: 20px;
     padding: 0px 10px;
+}
+
+#event-counter {
+    align-self: flex-end;
 }
