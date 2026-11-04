@@ -1,13 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch2Build Week 3 Assignment</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
- 
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch2Build Week 3 Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <form method="post" id="add-event-form">
+          <div>
+            <label for="title-input">Title:</label>
+            <input type="text" id="title-input" required>
+            <div id="error-message">The title length should be at least 3 characters without leading or trailing spaces.</div>
+          </div>
+          <div>
+            <label for="category-list">Event Category:</label>
+            <select name="categories" id="category-list">
+              <option value="tech">Tech</option>
+              <option value="workshop">Workshop</option>
+              <option value="social">Social</option>
+            </select>
+          </div>
+          <input type="submit" value="Add" id="add-btn">
+        </form>
+      </section>
+
+      <section id="filter-search">
+        <label for="filter-category">Choose Category</label>
+        <select id="filter-category">
+          <option value="all">All</option>
+          <option value="tech">Tech</option>
+          <option value="workshop">Workshop</option>
+          <option value="social">Social</option>
+        </select>
+      </section>
+
+      <section id="event-list">
+        <div class="event-card tech-event">
+          <span class="event-title">Event 1</span>
+          <div class="category tech">Tech</div>
+        </div>
+        <div class="event-card workshop-event">
+          <span class="event-title">Event 2</span>
+          <div class="category workshop">Workshop</div>
+        </div>
+        <div class="event-card social-event">
+          <span class="event-title">Event 3</span>
+          <div class="category social">Social</div>
+        </div>
+        <div class="event-card tech-event">
+          <span class="event-title">Event 4</span>
+          <div class="category tech">Tech</div>
+        </div>
+        <div class="event-card workshop-event">
+          <span class="event-title">Event 5</span>
+          <div class="category workshop">Workshop</div>
+        </div>
+        <div class="event-card social-event">
+          <span class="event-title">Event 6</span>
+          <div class="category social">Social</div>
+        </div>
+        <div class="event-card tech-event">
+          <span class="event-title">Event 7</span>
+          <div class="category tech">Tech</div>
+        </div>
+        <div class="event-card workshop-event">
+          <span class="event-title">Event 8</span>
+          <div class="category workshop">Workshop</div>
+        </div>
+        <div class="event-card social-event">
+          <span class="event-title">Event 9</span>
+          <div class="category social">Social</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
