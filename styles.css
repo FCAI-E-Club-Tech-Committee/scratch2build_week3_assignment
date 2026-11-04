@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --tech-main-color: blue;
+    --tech-background-color: rgba(94, 156, 255, 0.28);
+    --workshop-main-color: red;
+    --workshop-background-color: rgba(250, 100, 100, 0.28);
+    --social-main-color: green;
+    --social-background-color: rgba(135, 251, 96, 0.28);
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    height: 400px
+}
+
+#add-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type='text'] {
+    padding: 5px;
+}
+
+#error-message {
+    display: none;
+    color: red;
+    width: 210px;
+}
+
+#add-btn,
+#search-btn {
+    width: 100px;
+}
+
+main {
+    width: 100%;
+    display: grid;
+}
+
+#event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px, 1fr));
+    margin: 10px;
+    gap: 10px;
+}
+
+#event-list[data-filter='tech'] .event-card:not(.tech-event),
+#event-list[data-filter='workshop'] .event-card:not(.workshop-event),
+#event-list[data-filter='social'] .event-card:not(.social-event) {
+    display: none;
+}
+
+.event-card {
+    background-color: #CCCCCC;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.delete-event {
+    align-self: flex-start;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.category {
+    align-self: flex-end;
+}
+
+.tech {
+    background-color: var(--tech-background-color);
+    color: var(--tech-main-color);
+    border: 1px solid var(--tech-main-color);
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+
+.workshop {
+    background-color: var(--workshop-background-color);
+    color: var(--workshop-main-color);
+    border: 1px solid var(--workshop-main-color);
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+
+.social {
+    background-color: var(--social-background-color);
+    color: var(--social-main-color);
+    border: 1px solid var(--social-main-color);
+    border-radius: 20px;
+    padding: 0px 10px;
+}
+
+#event-counter {
+    align-self: flex-end;
+}
