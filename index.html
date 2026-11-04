@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch2Build Week 3 Assignment</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCAI Activity Portal - Event Filter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<script src="script.js"></script>
+    <div class="container">
+        <h1>FCAI Activity Portal</h1>
+
+        <!-- Add a new event form -->
+        <form id="event-form">
+            <input type="text" id="title-input" placeholder="Event Title (min 3 chars)" required>
+            <select id="category-input" required>
+                <option value="">Select Category</option>
+                <option value="tech">Tech</option>
+                <option value="workshop">Workshop</option>
+                <option value="social">Social</option>
+            </select>
+            <button type="submit">Add Event</button>
+        </form>
+
+        <!-- Search and Filter Section -->
+        <div class="filters-section">
+            <input type="text" id="search-input" placeholder="Search events by title...">
+            <select id="category-select">
+                <option value="all">All Categories</option>
+                <option value="tech">Tech</option>
+                <option value="workshop">Workshop</option>
+                <option value="social">Social</option>
+            </select>
+        </div>
+
+        <!-- Active Events Counter -->
+        <div id="active-counter">Showing 0 Events</div>
+
+        <!-- Events Container -->
+        <div id="events-container"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
