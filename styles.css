@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, Arial, sans-serif;
+}
+
+body {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+  color: #1f2933;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+form,
+#filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+input,
+select,
+button {
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 6px;
+  background: #fff;
+}
+
+input,
+select {
+  flex: 1;
+  min-width: 140px;
+}
+
+button {
+  cursor: pointer;
+  background: #2f6fed;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+#error-message {
+  color: #c62828;
+  min-height: 1.2rem;
+  margin: 0 0 12px;
+}
+
+#search-input {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.filter-btn {
+  background: #e4e7eb;
+  color: #1f2933;
+}
+
+.filter-btn.active {
+  background: #2f6fed;
+  color: #fff;
+}
+
+#event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border: 1px solid #e4e7eb;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+
+.event-title {
+  flex: 1;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.badge.tech {
+  background: #2f6fed;
+}
+
+.badge.workshop {
+  background: #7b3fe4;
+}
+
+.badge.social {
+  background: #0f9d58;
+}
+
+.delete-btn {
+  background: #e53935;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+#empty-state {
+  text-align: center;
+  color: #7b8794;
+  padding: 16px 0;
+}
