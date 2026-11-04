@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #eef2f7;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* Layout */
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: -25px auto 40px;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 21px;
+}
+
+/* Form fields */
+input,
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+#error-message {
+    color: #dc2626;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Counter */
+#event-count {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+/* Cards grid */
+#events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 18px;
+}
+
+.event-card {
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-top: 5px solid #9ca3af;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.event-card h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.card-description {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 12px;
+    word-break: break-word;
+}
+
+/* Category colors */
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+}
+
+.event-card[data-category="tech"] {
+    border-top-color: #2563eb;
+}
+
+.event-card[data-category="tech"] .category-badge {
+    background-color: #dbeafe;
+    color: #1d4ed8;
+}
+
+.event-card[data-category="workshop"] {
+    border-top-color: #f59e0b;
+}
+
+.event-card[data-category="workshop"] .category-badge {
+    background-color: #fef3c7;
+    color: #b45309;
+}
+
+.event-card[data-category="social"] {
+    border-top-color: #16a34a;
+}
+
+.event-card[data-category="social"] .category-badge {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+/* Delete button */
+.btn-delete {
+    display: block;
+    width: auto;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    font-size: 14px;
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.btn-delete:hover {
+    background-color: #dc2626;
+    color: white;
+}
+
+/* Empty state */
+#empty-message {
+    display: none;
+    text-align: center;
+    color: #6b7280;
+    font-size: 17px;
+    padding: 35px 20px;
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
+    background-color: #f9fafb;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
