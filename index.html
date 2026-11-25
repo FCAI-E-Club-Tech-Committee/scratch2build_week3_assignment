@@ -3,11 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scratch2Build Week 3 Assignment</title>
+  <title>FCAI Activity Portal - Event Filter</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
-<script src="script.js"></script>
+  <div class="container">
+    <header class="portal-header">
+      <h1>FCAI Activity Portal</h1>
+      <p>Create, manage, and filter campus events dynamically</p>
+    </header>
+
+    <section class="form-section">
+      <h2>Add New Event</h2>
+      <form id="event-form" novalidate>
+        <div class="form-group">
+          <label for="title-input">Event Title</label>
+          <input type="text" id="title-input" placeholder="e.g., AI & Machine Learning Workshop">
+        </div>
+
+        <div class="form-group">
+          <label for="category-input">Category</label>
+          <select id="category-input">
+            <option value="">-- Select Category --</option>
+            <option value="tech">Tech</option>
+            <option value="workshop">Workshop</option>
+            <option value="social">Social</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Add Event</button>
+      </form>
+      <p id="form-error" class="error-msg" role="alert" hidden></p>
+    </section>
+
+    <section class="controls-section">
+      <div class="filter-bar">
+        <input type="text" id="search-input" placeholder="Search events by title...">
+        
+        <select id="category-select" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="tech">Tech</option>
+          <option value="workshop">Workshop</option>
+          <option value="social">Social</option>
+        </select>
+      </div>
+
+      <div class="status-bar">
+        <span id="active-counter" class="counter-badge">Showing 3 Events</span>
+      </div>
+    </section>
+
+    <main>
+      <div id="events-container" class="events-grid">
+        <article class="event-card" data-category="tech">
+          <div class="card-header">
+            <span class="badge badge-tech">Tech</span>
+            <button type="button" class="btn-delete" aria-label="Delete event">Delete</button>
+          </div>
+          <h3 class="card-title">Frontend Architecture Hackathon</h3>
+        </article>
+
+        <article class="event-card" data-category="workshop">
+          <div class="card-header">
+            <span class="badge badge-workshop">Workshop</span>
+            <button type="button" class="btn-delete" aria-label="Delete event">Delete</button>
+          </div>
+          <h3 class="card-title">Git & GitHub Pull Request Lab</h3>
+        </article>
+
+        <article class="event-card" data-category="social">
+          <div class="card-header">
+            <span class="badge badge-social">Social</span>
+            <button type="button" class="btn-delete" aria-label="Delete event">Delete</button>
+          </div>
+          <h3 class="card-title">FCAI Freshers Welcome Meetup</h3>
+        </article>
+      </div>
+
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>No events found</h3>
+        <p>Try adjusting your search keywords or category filter, or add a new event above.</p>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
